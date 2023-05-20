@@ -1,0 +1,180 @@
+@tailwind base;
+
+* {
+    scrollbar-width:auto;
+    scrollbar-color: gray;
+}
+
+*::-webkit-scrollbar {
+    width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+    background: rgb(30, 30, 30);
+    /* border-radius: 10px; */
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 14px;
+    border: 3px solid gray;
+}
+
+
+@tailwind components;
+@tailwind utilities;
+
+
+
+@keyframes top {
+    0% {
+        opacity: 0;
+        margin-top: -100px;
+    }
+
+    20% {
+        opacity: 0.2;
+        margin-top: -80px;
+    }
+
+    40% {
+        opacity: 0.4;
+        margin-top: -60px;
+    }
+
+    60% {
+        opacity: 0.6;
+        margin-top: -40px;
+    }
+
+    80% {
+        opacity: 0.8;
+        margin-top: -20px;
+    }
+
+    100% {
+        opacity: 1;
+        margin-top: 0px;
+    }
+}
+
+.animate-top {
+    animation-name: top;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes bottom {
+    0% {
+        opacity: 0;
+        margin-bottom: -100px;
+    }
+
+    20% {
+        opacity: 0.2;
+        margin-bottom: -80px;
+    }
+
+    40% {
+        opacity: 0.4;
+        margin-bottom: -60px;
+    }
+
+    60% {
+        opacity: 0.6;
+        margin-bottom: -40px;
+    }
+
+    80% {
+        opacity: 0.8;
+        margin-bottom: -20px;
+    }
+
+    100% {
+        opacity: 1;
+        margin-bottom: 0px;
+    }
+}
+
+.animate-bottom {
+    animation-name: bottom;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+
+@keyframes left {
+    0% {
+        opacity: 0;
+        margin-left: -100px;
+    }
+
+    20% {
+        opacity: 0.2;
+        margin-left: -80px;
+    }
+
+    40% {
+        opacity: 0.4;
+        margin-left: -60px;
+    }
+
+    60% {
+        opacity: 0.6;
+        margin-left: -40px;
+    }
+
+    80% {
+        opacity: 0.8;
+        margin-left: -20px;
+    }
+
+    100% {
+        opacity: 1;
+        margin-left: 0px;
+    }
+}
+
+.animate-left {
+    animation-name: left;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes right {
+    0% {
+        opacity: 0;
+        margin-right: -100px;
+    }
+
+    20% {
+        opacity: 0.2;
+        margin-right: -80px;
+    }
+
+    40% {
+        opacity: 0.4;
+        margin-right: -60px;
+    }
+
+    60% {
+        opacity: 0.6;
+        margin-right: -40px;
+    }
+
+    80% {
+        opacity: 0.8;
+        margin-right: -20px;
+    }
+
+    100% {
+        opacity: 1;
+        margin-right: 0px;
+    }
+}
+
+.animate-right {
+    animation-name: right;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
