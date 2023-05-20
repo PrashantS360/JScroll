@@ -25,7 +25,7 @@ function Icon({ steps, scroll }) {
       <path
         fill="none"
         stroke="#FFF"
-        strokeDasharray={`${scroll/4.5},1000`}
+        strokeDasharray={`${scroll/4.2},1000`}
         strokeMiterlimit="20"
         strokeWidth="2"
         d="M84.2 85c31.3-31.5 74.7-51 122.7-51 95.5 0 173 77.5 173 173s-77.5 173-173 173c-47.8 0-91-19.4-122.3-50.7"
