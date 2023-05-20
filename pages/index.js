@@ -143,9 +143,9 @@ export default function Home() {
     }
   }
 
-
+  const [mobilePage, setMobilePage] = useState(0);
   const handleChange = (index) => {
-    setPage(index);
+    setMobilePage(index);
   }
 
   return (
@@ -214,16 +214,18 @@ export default function Home() {
             <Page7 />
           </Carousel>
         </div>
-        <div className={`${pageDetails[page].bgColor} text-white min-h-[40vh] p-8`}>
-          {pageDetails[page].imgLink.length > 0 && <Image priority src={pageDetails[page].imgLink} width={250} height={70} />}
-          <h2 className='text-4xl'>ABC {pageDetails[page].id}</h2>
-          <p className=''>{pageDetails[page].des}</p>
+        {steps.map((step, index) => {
+          return index == mobilePage && <div key={step} className={`${pageDetails[mobilePage].bgColor} text-white min-h-[40vh] p-8`}>
+            {pageDetails[mobilePage].imgLink.length > 0 && <Image priority src={pageDetails[mobilePage].imgLink} width={250} height={70} />}
+            <h2 className='text-4xl'>ABC {pageDetails[mobilePage].id}</h2>
+            <p className=''>{pageDetails[mobilePage].des}</p>
 
-          <div className='flex justify-between items-center pt-8'>
-            <p className='text-gray-300'>{pageDetails[page].view}</p>
-            <button className='uppercase text-2xl'>Skip</button>
+            <div className='flex justify-between items-center pt-8'>
+              <p className='text-gray-300'>{pageDetails[mobilePage].view}</p>
+              <button className='uppercase text-2xl'>Skip</button>
+            </div>
           </div>
-        </div>
+        })}
       </main>
     </div>
   )
