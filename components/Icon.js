@@ -1,9 +1,13 @@
-import React from "react";
+import React,{useEffect} from "react";
 
 function Icon({ steps, scroll, setScroll }) {
   const handleClick = (scrollBy) => {
     setScroll(scrollBy);
   }
+
+  useEffect(() => {
+    window.scrollTo(0, scroll);
+  }, []);
 
   return (
     <svg
