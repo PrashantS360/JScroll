@@ -162,7 +162,7 @@ export default function Home() {
               <div className={`w-[45%] fixed top-0 left-0 flex flex-col ${pageDetails[page].bgColor} text-white h-full items-end animate-right`}>
                 <div className={`-mr-28 mt-12 ${pageDetails[page].bgColor} rounded-full h-72 w-72 flex justify-center items-center`}>
                   <div className="flex items-center justify-center">
-                    <Icon className='w-40' steps={steps} scroll={scroll} />
+                    <Icon className='w-40' steps={steps} scroll={scroll} setScroll={setScroll}/>
                     <div className="steps absolute right-12 animate-right">
                       <h4 className='text-lg'>{pageDetails[page].title}</h4>
                       {page != 2 ? <h2 className='text-4xl font-bold'>{pageDetails[page].heading}</h2> :

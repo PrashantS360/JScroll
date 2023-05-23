@@ -1,6 +1,10 @@
 import React from "react";
 
-function Icon({ steps, scroll }) {
+function Icon({ steps, scroll, setScroll }) {
+  const handleClick = (scrollBy) => {
+    setScroll(scrollBy);
+  }
+
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -25,13 +29,13 @@ function Icon({ steps, scroll }) {
       <path
         fill="none"
         stroke="#FFF"
-        strokeDasharray={`${scroll/4.2},1000`}
+        strokeDasharray={`${scroll / 4.2},1000`}
         strokeMiterlimit="20"
         strokeWidth="2"
         d="M84.2 85c31.3-31.5 74.7-51 122.7-51 95.5 0 173 77.5 173 173s-77.5 173-173 173c-47.8 0-91-19.4-122.3-50.7"
         className="transrgwht"
       ></path>
-      <g className="dots-nav-1">
+      <g className="dots-nav-1 cursor-pointer" onClick={() => { handleClick(steps[0]) }}>
         <path
           fill={scroll >= steps[0] ? "#0092FF" : "#808080"}
           d="M84 80c-3.3 0-6 2.7-6 6s2.7 6 6 6 6-2.7 6-6-3-6-6-6z"
@@ -46,7 +50,7 @@ function Icon({ steps, scroll }) {
           className="dotsstro1"
         ></path>
       </g>
-      <g className="dots-nav-2">
+      <g className="dots-nav-2 cursor-pointer" onClick={() => { handleClick(steps[1]) }}>
         <path
           fill={scroll >= steps[1] ? "#0092FF" : "#808080"}
           d="M206.8 29c-3.3 0-6 2.7-6 6s2.7 6 6 6 6-2.7 6-6-2.7-6-6-6zm0 NaN"
@@ -61,7 +65,7 @@ function Icon({ steps, scroll }) {
           className="dotsstro2"
         ></path>
       </g>
-      <g className="dots-nav-3">
+      <g className="dots-nav-3 cursor-pointer" onClick={() => { handleClick(steps[2]) }}>
         <path
           fill={scroll >= steps[2] ? "#0092FF" : "#808080"}
           d="M332 85c-3.3 0-6 2.7-6 6s2.7 6 6 6 6-2.7 6-6-3-6-6-6zm0 NaN"
@@ -76,7 +80,7 @@ function Icon({ steps, scroll }) {
           className="dotsstro3"
         ></path>
       </g>
-      <g className="dots-nav-4">
+      <g className="dots-nav-4 cursor-pointer" onClick={() => { handleClick(steps[3]) }}>
         <path
           fill={scroll >= steps[3] ? "#0092FF" : "#808080"}
           d="M380 205c-3.3 0-6 2.7-6 6s2.7 6 6 6 6-2.7 6-6-3-6-6-6zm0 NaN"
@@ -91,7 +95,7 @@ function Icon({ steps, scroll }) {
           className="dotsstro4"
         ></path>
       </g>
-      <g className="dots-nav-5">
+      <g className="dots-nav-5 cursor-pointer" onClick={() => { handleClick(steps[4]) }}>
         <path
           fill={scroll >= steps[4] ? "#0092FF" : "#808080"}
           d="M335 315c-3.3 0-6 2.7-6 6s2.7 6 6 6 6-2.7 6-6-1-6-6-6zm0 NaN"
@@ -106,7 +110,7 @@ function Icon({ steps, scroll }) {
           className="dotsstro5"
         ></path>
       </g>
-      <g className="dots-nav-6">
+      <g className="dots-nav-6 cursor-pointer" onClick={() => { handleClick(steps[5]) }}>
         <path
           fill={scroll >= steps[5] ? "#0092FF" : "#808080"}
           d="M210 375c-3.3 0-6 2.7-6 6s2.7 6 6 6 6-2.7 6-6-1-6-6-6zm0 NaN"
@@ -121,7 +125,7 @@ function Icon({ steps, scroll }) {
           className="dotsstro6"
         ></path>
       </g>
-      <g className="dots-nav-7">
+      <g className="dots-nav-7 cursor-pointer" onClick={() => { handleClick(steps[6]) }}>
         <path
           fill={scroll >= steps[6] ? "#0092FF" : "#808080"}
           d="M88 324c-3.3 0-6 2.7-6 6s2.7 6 6 6 6-2.7 6-6-2-6-6-6zm0 NaN"
